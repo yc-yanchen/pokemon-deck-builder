@@ -1,0 +1,16 @@
+.top-nav {
+    padding: 16px 0;
+
+}
+
+.top-nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav ul {
+    display: flex;
+align-items: center;
+gap: 48px;
+}
