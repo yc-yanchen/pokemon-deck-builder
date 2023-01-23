@@ -3,7 +3,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, a:visited ul, li, button, input {
-color: black;
+color: var(--black);
 font-size: 1.8rem;
 padding: 0;
 margin: 0;
@@ -11,7 +11,7 @@ margin: 0;
 
 .wrapper {
 width: 90%;
-max-width: 1400px;
+max-width: 1200px;
 margin: 0 auto;
 }
 
@@ -26,4 +26,10 @@ display: block;
 
 .piplup-icon {
     width: 48px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }

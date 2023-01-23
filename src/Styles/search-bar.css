@@ -1,0 +1,37 @@
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button {
+    height: 40px;
+    width: 40px;
+    border: var(--quat) solid 1px;
+    background-color: var(--tertiary);
+    border-radius: 75px;
+}
+
+
+.search-button-active {
+    width: 48px;
+    border-top: var(--quat) 1px solid;
+    border-bottom: var(--quat) 1px solid;
+    border-left: none;
+    border-right: var(--quat) 1px solid;
+    border-radius: 0 75px 75px 0;
+}
+
+.search-input {
+    padding: 0 16px 0 16px;
+    height: 40px;
+    border: var(--quat) 1px solid;
+    border-radius: 75px 0 0 75px;
+    outline-offset: 0px;
+}
+

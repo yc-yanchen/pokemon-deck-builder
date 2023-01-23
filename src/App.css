@@ -1,4 +1,15 @@
+/* Colour pallette  */
+:root {
+  --primary: #547793;
+  --secondary: #f7f2ef;
+  --tertiary: #e0e0e0;
+  --quat: #c1c9cc;
+  --black: #1c1c1c;
+}
+
+/* Import css files */
 @import url(./Styles/setup.css);
 @import url(./Styles/general.css);
 @import url(./Styles/logo.css);
 @import url(./Styles/top-nav.css);
+@import url(./Styles/search-bar.css);

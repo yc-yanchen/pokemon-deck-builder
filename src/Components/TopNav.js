@@ -1,7 +1,8 @@
 import Logo from "./Logo";
+import SearchBar from "./SearchBar";
 
 
-const TopNav = () => {
+const TopNav = ({ SearchBar }) => {
     return (
         <>
             <nav className="top-nav">
@@ -11,6 +12,7 @@ const TopNav = () => {
                         <li>Home</li>
                         <li>Deck Builder</li>
                         <li>Deck Viewer</li>
+                        <li>{SearchBar}</li>
                     </ul>
                 </div>
             </nav>

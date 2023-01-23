@@ -1,6 +1,7 @@
 .top-nav {
     padding: 16px 0;
-
+    /* background-color: black; */
+    /* background-color: var(--primary) */
 }
 
 .top-nav .wrapper {
