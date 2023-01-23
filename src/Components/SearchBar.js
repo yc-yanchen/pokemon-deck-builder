@@ -29,7 +29,9 @@ const SearchBar = ({ cardResult, setCardResult }) => {
         pokemon.card.where({ q: `name:${searchValue}`, pageSize: 12, page: 1 })
             .then(result => {
                 setCardResult(result);
-                console.log(cardResult);
+                console.log(result);
+                // console.log(cardResult.data[0].images.small);
+                console.log(cardResult.data);
             });
     };
 

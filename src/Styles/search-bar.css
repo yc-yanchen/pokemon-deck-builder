@@ -20,10 +20,7 @@
 
 .search-button-active {
     width: 48px;
-    border-top: var(--quat) 1px solid;
-    border-bottom: var(--quat) 1px solid;
     border-left: none;
-    border-right: var(--quat) 1px solid;
     border-radius: 0 75px 75px 0;
 }
 
