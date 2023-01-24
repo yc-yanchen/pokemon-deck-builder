@@ -24,7 +24,11 @@ function App() {
   const searchOnSubmit = (e) => {
     e.preventDefault();
     setSaveSearchValue(searchValue);
-    pokemon.card.where({ q: `name:${searchValue}`, pageSize: 10, page: 1 })
+    pokemon.card.where({
+      q: `name:${searchValue}`,
+      pageSize: 12,
+      page: 1
+    })
       .then(result => {
         setCardResult(result);
         setCurrentPage(result.page);
@@ -33,7 +37,11 @@ function App() {
   };
 
   const pageOnClick = (pageNum) => {
-    pokemon.card.where({ q: `name:${saveSearchValue}`, pageSize: 10, page: pageNum })
+    pokemon.card.where({
+      q: `name:${saveSearchValue}`,
+      pageSize: 12,
+      page: pageNum
+    })
       .then(result => {
         setCardResult(result);
         setCurrentPage(result.page);

@@ -5,10 +5,10 @@ const PageNav = ({ cardResult, pageOnClick, currentPage }) => {
     const [finalPage, setFinalPage] = useState(0);
     const countPage = () => {
         const tempArray = [];
-        const pageTotal = Math.ceil(cardResult.totalCount / cardResult.count);
+        const pageTotal = Math.ceil(cardResult.totalCount / 12);
         console.log(pageTotal);
         // pages.push('apple');
-        for (let i = 1; i < pageTotal; i++) {
+        for (let i = 1; i <= pageTotal; i++) {
             tempArray.push(i);
         }
         setPages(tempArray);
@@ -34,7 +34,7 @@ const PageNav = ({ cardResult, pageOnClick, currentPage }) => {
                         );
                     })}
                 </ul>
-                {currentPage === finalPage - 1 ? null : <button onClick={() => { pageOnClick(currentPage + 1); }}><span className="material-symbols-outlined">
+                {currentPage === finalPage ? null : <button onClick={() => { pageOnClick(currentPage + 1); }}><span className="material-symbols-outlined">
                     navigate_next
                 </span></button>}
 

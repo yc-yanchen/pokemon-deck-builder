@@ -1,9 +1,9 @@
 .search-result {
-    margin-top: 54px;
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px 16px;
+    gap: 40px 32px;
 }
 
 .search-result-card {
