@@ -5,3 +5,11 @@
     justify-content: center;
     gap: 32px 24px;
 }
+
+.search-result-card {
+    height: 256px;
+}
+
+.search-result-card img {
+    height: 100%;
+}

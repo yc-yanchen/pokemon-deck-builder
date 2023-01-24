@@ -1,0 +1,22 @@
+.introduction {
+    margin-top: 80px;
+    width: 90%;
+    background-color: var(--primary);
+    padding: 48px;
+    border-radius: 8px;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.introduction h2, .introduction p, .introduction a {
+    color: var(--tertiary);
+}
+
+.introduction h2 {
+    font-size: 3.2rem;
+    margin-bottom: 16px;
+}
+
+.introduction p {
+    margin-bottom: 12px;
+}

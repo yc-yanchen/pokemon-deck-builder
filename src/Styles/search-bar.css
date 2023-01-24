@@ -15,6 +15,7 @@
     border: var(--quat) solid 1px;
     background-color: var(--tertiary);
     border-radius: 75px;
+    /* box-shadow: var(--shadow-xsmall); */
 }
 
 
@@ -29,6 +30,7 @@
     height: 40px;
     border: var(--quat) 1px solid;
     border-radius: 75px 0 0 75px;
-    outline-offset: 0px;
+    outline-offset: -2px;
+    /* box-shadow: var(--shadow-xsmall); */
 }
 

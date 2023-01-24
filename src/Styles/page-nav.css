@@ -1,0 +1,21 @@
+.page-nav, .page-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.page-nav {
+    margin: 32px 0;
+}
+
+.page-nav button {
+    margin: 0 16px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tertiary);
+    border: var(--quat) solid 1px;
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+}

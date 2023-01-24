@@ -21,21 +21,19 @@ const SearchBar = ({ cardResult, setCardResult }) => {
 
     const searchOnChange = (e) => {
         setSearchValue(e.target.value);
-        console.log(searchValue);
+        // console.log(searchValue);
     };
 
     const searchOnSubmit = (e) => {
         e.preventDefault();
-        pokemon.card.where({ q: `name:${searchValue}`, pageSize: 12, page: 1 })
+        pokemon.card.where({ q: `name:${searchValue}`, pageSize: 10, page: 1 })
             .then(result => {
                 setCardResult(result);
                 console.log(result);
                 // console.log(cardResult.data[0].images.small);
-                console.log(cardResult.data);
+                // console.log(cardResult.data);
             });
     };
-
-
 
     return (
         <form className="search-container" onSubmit={searchOnSubmit} >
