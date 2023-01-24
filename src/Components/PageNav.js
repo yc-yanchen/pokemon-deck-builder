@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 
-const PageNav = ({ cardResult }) => {
+const PageNav = ({ cardResult, pageOnClick, currentPage }) => {
     const [pages, setPages] = useState([]);
-
+    const [finalPage, setFinalPage] = useState(0);
     const countPage = () => {
         const tempArray = [];
         const pageTotal = Math.ceil(cardResult.totalCount / cardResult.count);
+        console.log(pageTotal);
         // pages.push('apple');
         for (let i = 1; i < pageTotal; i++) {
             tempArray.push(i);
         }
         setPages(tempArray);
+        setFinalPage(pageTotal);
     };
 
     useEffect(() => {
@@ -21,19 +23,21 @@ const PageNav = ({ cardResult }) => {
     return (
         <>
             <div className="page-nav">
-                <button><span className="material-symbols-outlined">
+
+                {currentPage - 1 === 0 ? null : <button onClick={() => { pageOnClick(currentPage - 1); }} ><span className="material-symbols-outlined">
                     navigate_before
-                </span></button>
+                </span></button>}
                 <ul className="page-list">
                     {pages.map((value) => {
                         return (
-                            <li key={value} ><a href="#">{value}</a></li>
+                            <li key={value} onClick={() => { pageOnClick(value); }} ><a href="#">{value}</a></li>
                         );
                     })}
                 </ul>
-                <button><span className="material-symbols-outlined">
+                {currentPage === finalPage - 1 ? null : <button onClick={() => { pageOnClick(currentPage + 1); }}><span className="material-symbols-outlined">
                     navigate_next
-                </span></button>
+                </span></button>}
+
             </div>
         </>
     );

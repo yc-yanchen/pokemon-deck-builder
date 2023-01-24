@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Introduction from "./Introduction";
-import PageNav from "./PageNav";
 
-const SearchResult = ({ cardResult }) => {
+
+const SearchResult = ({ cardResult, PageNav }) => {
 
 
     return (
@@ -15,11 +15,11 @@ const SearchResult = ({ cardResult }) => {
                         {cardResult.data.map((value) => {
                             return (
                                 // console.log(value)
-                                <li className="search-result-card" key={value.id} > <img src={value.images.small} alt={`${value.name} from ${value.set.name}, Artist: ${value.artist}`}></img></li>
+                                <li className="search-result-card" key={value.id} ><img src={value.images.small} alt={`${value.name} from ${value.set.name}, Artist: ${value.artist}`}></img></li>
                             );
                         })}
                     </ul>
-                    <PageNav cardResult={cardResult} />
+                    {PageNav}
                 </>
             }
 

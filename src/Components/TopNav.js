@@ -9,7 +9,7 @@ const TopNav = ({ SearchBar }) => {
                 <div className="wrapper">
                     <Logo />
                     <ul>
-                        <li>Home</li>
+                        {/* <li>Home</li> */}
                         <li>Deck Builder</li>
                         <li>Deck Viewer</li>
                         <li>{SearchBar}</li>

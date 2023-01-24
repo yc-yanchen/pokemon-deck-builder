@@ -3,13 +3,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px 24px;
+    gap: 24px 16px;
 }
 
 .search-result-card {
-    height: 256px;
+    height: 300px;
+    cursor: pointer;
 }
 
 .search-result-card img {
     height: 100%;
+    box-shadow: var(--shadow-small);
+    transition: all 0.15s ease-in;
+    border-radius: 12px;
+}
+
+.search-result-card img:hover,
+.search-result-card img:focus {
+    transform: scale(1.08);
+    box-shadow: var(--shadow-large);
 }
