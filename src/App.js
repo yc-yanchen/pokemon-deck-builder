@@ -6,6 +6,8 @@ import { useState } from 'react';
 import SearchResult from './Components/SearchResult';
 import pokemon from 'pokemontcgsdk';
 import PageNav from './Components/PageNav';
+import { Routes, Route, Link, useNavigate, redirect } from 'react-router-dom';
+import Introduction from './Components/Introduction';
 
 pokemon.configure({ apiKey: 'e4dccf80-0d32-444e-9609-d08da5da041a' });
 
@@ -34,6 +36,7 @@ function App() {
         setCurrentPage(result.page);
         console.log(result);
       });
+    return redirect("/search");
   };
 
   const pageOnClick = (pageNum) => {
@@ -47,13 +50,18 @@ function App() {
         setCurrentPage(result.page);
         console.log(result);
       });
+
   };
+
 
   return (
     <div className="App">
       <TopNav SearchBar={<SearchBar searchOnSubmit={searchOnSubmit} setSearchValue={setSearchValue} />} />
       <div className="wrapper">
-        <SearchResult cardResult={cardResult} PageNav={<PageNav pageOnClick={pageOnClick} cardResult={cardResult} currentPage={currentPage} />} />
+        <Routes>
+          <Route path='/' element={<Introduction />} />
+          <Route path='/search' element={<SearchResult cardResult={cardResult} PageNav={<PageNav pageOnClick={pageOnClick} cardResult={cardResult} currentPage={currentPage} />} />} />
+        </Routes>
       </div>
     </div>
   );
